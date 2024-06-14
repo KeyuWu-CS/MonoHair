@@ -1,0 +1,3 @@
+[submodule "submodules/instant-ngp"]
+	path = submodules/instant-ngp
+	url = https://github.com/NVlabs/instant-ngp
