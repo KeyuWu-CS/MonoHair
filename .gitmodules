@@ -1,3 +1,15 @@
 [submodule "submodules/instant-ngp"]
 	path = submodules/instant-ngp
 	url = https://github.com/NVlabs/instant-ngp
+[submodule "submodules/MODNet"]
+	path = submodules/MODNet
+	url = https://github.com/ZHKKKe/MODNet
+[submodule "submodules/CDGNet"]
+	path = submodules/CDGNet
+	url = https://github.com/tjpulkl/CDGNet
+[submodule "submodules/face-parsing.PyTorch"]
+	path = submodules/face-parsing.PyTorch
+	url = https://github.com/zllrunning/face-parsing.PyTorch
+[submodule "submodules/DELTA"]
+	path = submodules/DELTA
+	url = https://github.com/yfeng95/DELTA
