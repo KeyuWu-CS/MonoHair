@@ -1,0 +1,42 @@
+root_folder = data
+calib_folder = camera/calib_data/wky07-22
+data_type = real
+
+sample_style = corner
+save_folder = ours
+save_vname = voxels.dat
+use_hair_depth=True
+cat_depth=True
+#use_dir=True
+
+# model params
+fuse_func = vit
+use_pos
+use_pt
+
+ds_num_views = 16
+md_num_views = 16
+
+sample_range = all
+backbone = unet
+
+occ_vit_dim = 128
+occ_vit_depth = 3
+occ_vit_heads = 8
+occ_pts_embed_res = 5
+
+ori_vit_dim = 128
+ori_vit_depth = 3
+ori_vit_heads = 8
+ori_pts_embed_res = 5
+
+# trained model path
+occ_model_path = submodules/DeepMVSHair/trained/wky10-30-undirection/occ.pth
+ori_model_path = submodules/DeepMVSHair/trained/wky10-30-undirection/ori.pth
+#occ_model_path = trained/wky10-14-cat_depth/occ.pth
+#ori_model_path = trained/wky10-14-cat_depth/ori.pth
+
+# evaluation
+eval_pts_per_batch = 8192
+
+

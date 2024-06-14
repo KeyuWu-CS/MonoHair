@@ -1,0 +1,26 @@
+_parent_: configs/reconstruct/base.yaml
+
+
+data:
+  case: ksyusha1
+  image_size: [1920,1080]
+  frame_interval: 4
+  conf_threshold: 0.4
+
+
+
+ngp:
+  marching_cubes_density_thresh: 2.8
+
+
+PMVO:
+  patch_size: 5
+
+HairGenerate:
+  connect_threshold: 0.0025
+  grow_threshold: 0.8
+  connect_dot_threshold: 0.8
+  out_ratio: 0.1
+
+
+

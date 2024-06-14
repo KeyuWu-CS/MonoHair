@@ -1,0 +1,97 @@
+#default
+yaml:                                   # config file (must be specified from command line)
+seed: 0
+cpu:
+gpu: 0
+
+name: 10-16
+
+prepare_data:
+  select_images: true
+  process_camera: true
+  run_ngp: true
+  fit_bust: true
+  process_bust: true
+  render_depth: true
+  process_imgs: true
+
+infer_inner:
+  render_data: true
+  run_mvs: true
+
+
+
+camera_path: camera/calib_data/wky07-22/cam_params.json
+image_camera_path: ours/cam_params.json
+
+output_root: output
+save_path: refine
+
+
+
+bbox_min: [-0.32, -0.32, -0.24]
+vsize: 0.005
+bust_to_origin: [0.006, -1.644, 0.010]
+
+data:
+  root: data
+  case:
+  image_size: [1920,1080]
+  frame_interval: 1
+
+  ### optimize
+  scalp_path: ours/scalp_tsfm.obj
+  bust_path: ours/bust_long_tsfm.obj
+  Ori2D_path: best_ori
+  Conf_path: conf
+  Occ3D_path: ours/Occ3D.mat
+  Ori3D_path: ours/Ori3D.mat
+  depth_path: render_depth
+  mask_path: hair_mask
+  raw_points_path: ours/colmap_points.obj
+  strands_path: ours/world_str_raw.dat
+
+
+segment:
+  CDGNET_ckpt: assets/CDGNet/LIP_epoch_149.pth
+  MODNET_ckpt: assets/MODNet/modnet_photographic_portrait_matting.ckpt
+#  CDGNET_ckpt: hair_segment_matting/CDGNet/snapshots/LIP_epoch_149.pth
+#  MODNET_ckpt: hair_segment_matting/MODNet/pretrained/modnet_photographic_portrait_matting.ckpt
+  scene_path:
+
+ngp:
+  marching_cubes_density_thresh: 3.0
+
+
+
+PMVO:
+  num_sample_per_grid: 4
+  patch_size: 9
+  optimize: True
+  filter_point: True
+  visible_threshold: 1
+  infer_inner: true
+  genrate_ori_only:
+  threshold: 0.05
+  conf_threshold: 0.1
+
+
+
+HairGenerate:
+  connect_threshold: 0.005
+  grow_threshold: 0.8
+  connect_dot_threshold: 0.7
+  dist_to_root: 6
+  connect_to_guide:
+  generate_segments: True
+  connect_segments: True
+  connect_scalp: True
+  out_ratio: 0.5
+
+
+scalp_diffusion:
+
+check_strands: True
+
+
+

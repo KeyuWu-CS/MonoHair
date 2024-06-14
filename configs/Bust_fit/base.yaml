@@ -1,0 +1,62 @@
+#default
+yaml:                                   # config file (must be specified from command line)
+seed: 0
+cpu:
+gpu: 0
+name: debug
+
+num_workers: 4
+isTrain: True
+
+output_root: output
+savepath: data
+output_path:
+path: data
+
+
+vis: True
+ignore_existing:
+load_fits:
+
+
+batch_size: 1
+
+smplx:
+  n_shape: 300
+  n_exp: 100
+  n_tex: 100
+  smplx_model_path: assets/data/SMPLX_NEUTRAL_2020.npz
+  extra_joint_path: assets/data/smplx_extra_joints.yaml
+  j14_regressor_path: assets/data/SMPLX_to_J14.pkl
+  mano_ids_path: assets/data/MANO_SMPLX_vertex_ids.pkl
+  flame_ids_path: assets/data/SMPL-X__FLAME_vertex_ids.npy
+  flame_vertex_masks_path: assets/data/FLAME_masks.pkl
+  topology_path: assets/data/SMPL_X_template_FLAME_uv.obj
+  flame2smplx_cached_path: assets/data/flame2smplx_tex_1024.npy
+  face_eye_mask_path: assets/data/uv_face_eye_mask.png
+  uv_size: 512
+  smplx_tex_path: assets/data/smplx_tex.png
+  face_mask_path: assets/data/uv_face_mask.png
+  tex_type: BFM
+  tex_path: assets/data/FLAME_albedo_from_BFM.npz
+
+
+optimize:
+  iter: 10000
+  vis_step: 100
+  data_type: fix_shoulder
+  use_iris:
+  use_mask:
+  use_rendering:
+
+
+
+
+
+loss:
+  lmk: 1
+  eyed: 2
+  lipd: 0.5
+  inside_mask:
+  scale_weight: 1.
+

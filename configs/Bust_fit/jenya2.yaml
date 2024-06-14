@@ -1,0 +1,20 @@
+_parent_: configs/Bust_fit/base.yaml
+
+subject: jenya2
+
+
+savepath: data
+subject_path: data/jenya2
+camera_path: data/jenya2/ours/cam_params.json
+
+data:
+    image_size: [1920,1080]
+
+smplx:
+    n_shape: 300
+    n_exp: 100
+
+
+
+loss:
+  scale_weight: 1

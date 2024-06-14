@@ -1,0 +1,26 @@
+_parent_: configs/reconstruct/base.yaml
+
+
+data:
+  case: mid_wavy1
+  image_size: [1920,1080]
+  frame_interval: 4
+
+prepare_data:
+  fit_bust:
+
+ngp:
+  marching_cubes_density_thresh: 2.5
+
+
+LPMVS:
+   patch_size: 7
+   conf_threshold: 0.1
+
+
+HairGenerate:
+  connect_threshold: 0.0025
+  grow_threshold: 0.85
+  connect_dot_threshold: 0.8
+  dist_to_root: 2
+  out_ratio: 0.3

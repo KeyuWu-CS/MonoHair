@@ -1,0 +1,27 @@
+_parent_: configs/reconstruct/base.yaml
+
+
+data:
+  case: short_curly1
+  image_size: [1080,1920]
+  frame_interval: 7
+
+prepare_data:
+    fit_bust:
+
+ngp:
+  marching_cubes_density_thresh: 3.0    ### should be adjust
+
+PMVO:
+  num_sample_per_grid: 6
+  patch_size: 5
+  threshold: 0.05
+  conf_threshold: 0.1
+
+
+### should be adjust
+HairGenerate:
+  connect_threshold: 0.0025
+  grow_threshold: 0.85
+  connect_dot_threshold: 0.8
+  out_ratio: 0.
