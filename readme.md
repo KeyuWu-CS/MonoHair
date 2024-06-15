@@ -25,7 +25,7 @@ Clone the repository and install requirements:
 
 ## Dependencies and submodules ##
 
-Install [Pytorch/](https://pytorch.org/ "torch"), [pytorch3d](https://github.com/facebookresearch/pytorch3d) and [tiny-cuda-nn](https://github.com/NVlabs/tiny-cuda-nn). We have tested on Ubuntu 22.04.4, python==3.10.12 pytorch==1.13.0, pytorch3d==0.7.6 with CUDA 11.6 on RTX 3090Ti. You can install any version that is compatible with these dependencies.
+Install [Pytorch](https://pytorch.org/ "torch"), [Pytorch3d](https://github.com/facebookresearch/pytorch3d) and [tiny-cuda-nn](https://github.com/NVlabs/tiny-cuda-nn). We have tested on Ubuntu 22.04.4, python==3.10.12 pytorch==1.13.0, pytorch3d==0.7.6 with CUDA 11.6 on RTX 3090Ti. You can install any version that is compatible with these dependencies.
 
 Initialize submodules of [Instant-NGP](https://github.com/NVlabs/instant-ngp "Instant-NGP"), [MODNet](https://github.com/ZHKKKe/MODNet "MODNet"), [CDGNet](https://github.com/tjpulkl/CDGNet "CDGNet"), [DELTA](https://github.com/yfeng95/DELTA "DELTA") and [face-parsing](https://github.com/zllrunning/face-parsing.PyTorch "face-parsing"). Download pretrained model for [MODNet](https://github.com/ZHKKKe/MODNet "MODNet"), [CDGNet](https://github.com/tjpulkl/CDGNet "CDGNet") and [face-parsing](https://github.com/zllrunning/face-parsing.PyTorch "face-parsing").
 
