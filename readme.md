@@ -33,12 +33,12 @@ Initialize submodules of [Instant-NGP](https://github.com/NVlabs/instant-ngp "In
 
 Compile Instant-NGP and move our modified run.py to instant-ngp/scripts.
 
-    cp run.py /submodules/instant-ngp/scripts
+	cp run.py submodules/instant-ngp/scripts/
 	cd submodules/instant-ngp
 	cmake . -B build -DCMAKE_BUILD_TYPE=RelWithDebInfo
 	cmake --build build --config RelWithDebInfo -j
-	cd ..
-	cd ..
+	cd ../..
+
 	
 
 if you have problem with Instant-NGP compile. Please refer their [instruction](https://github.com/NVlabs/instant-ngp)
