@@ -124,6 +124,9 @@ if __name__ == '__main__':
         print('fiting ...')
         cmd = 'python multiview_optimization.py  --yaml=configs/Bust_fit/{} '.format(case)
         os.system(cmd)
+        if not os.path.exists(os.path.join(args.data.root,'optimize','model_tsfm.dat')):
+            print('If you are not running wig hair, please first run bust fitting. ')
+
         shutil.copyfile(os.path.join(args.data.root,'optimize','model_tsfm.dat'),os.path.join(args.data.root,'model_tsfm.dat'))
         shutil.copyfile(os.path.join(args.data.root,'optimize','model_tsfm_semantic.dat'),os.path.join(args.data.root,'model_tsfm_semantic.dat'))
         Bust_root = os.path.join(args.data.root,'Bust')
