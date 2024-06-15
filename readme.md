@@ -1,15 +1,14 @@
 
-# MonoHair:High-Fidelity Hair Modeling from a Monocular Video (CVPR2024 Oral) [[Projectpage](https://keyuwu-cs.github.io/MonoHair/ "Projectpage")] #
-
-
+# MonoHair:High-Fidelity Hair Modeling from a Monocular Video (<font color='red'> CVPR2024 Oral </font>) [[Projectpage](https://keyuwu-cs.github.io/MonoHair/ "Projectpage")] #
 This repository is the official code for MonoHair. Give a monocular video, MonoHair reconstruct a high-fidelity 3D strand model. 
-We give some examples for reconstructing 3D hair from a monocular video or multi-view images.
 
-We generate 3D avatar using flame template and fit the flame coarse geometry using multiview images (only for real human capture), more details please check [DELTA](https://github.com/yfeng95/DELTA "Delta") 
-For coarse goemtry initialization, please check [Instant-NGP](https://github.com/NVlabs/instant-ngp "Instant-NGP").
-For hair exterior geometry synthesis, we propose patch-based multi-view optimization (PMVO) method, please check our [Paper](https://arxiv.org/abs/2403.18356 "MonoHair").
-For hair interior inference, please check [DeepMVSHair](https://dl.acm.org/doi/abs/10.1145/3550469.3555385 "DeepMVSHair").
-For strands generate, please also check our paper.
+In this repository we also give some examples for reconstructing 3D hair from a monocular video or multi-view images.
+
+- We generate 3D avatar using flame template and fit the flame coarse geometry using multiview images (only for real human capture), more details please check [DELTA](https://github.com/yfeng95/DELTA "Delta") 
+- For coarse goemtry initialization, please check [Instant-NGP](https://github.com/NVlabs/instant-ngp "Instant-NGP").
+- For hair exterior geometry synthesis, we propose patch-based multi-view optimization (PMVO) method, please check our [Paper](https://arxiv.org/abs/2403.18356 "MonoHair").
+- For hair interior inference, please check [DeepMVSHair](https://dl.acm.org/doi/abs/10.1145/3550469.3555385 "DeepMVSHair").
+- For strands generate, please also check our paper.
 
 ![](fig/results.png)
 
