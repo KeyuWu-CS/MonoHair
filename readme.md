@@ -2,8 +2,6 @@
 # MonoHair:High-Fidelity Hair Modeling from a Monocular Video (CVPR2024 Oral) [[Projectpage](https://keyuwu-cs.github.io/MonoHair/ "Projectpage")] #
 
 
-----------
-
 This repository is the official code for MonoHair. Give a monocular video, MonoHair reconstruct a high-fidelity 3D strand model. 
 We give some examples for reconstructing 3D hair from a monocular video or multi-view images.
 
@@ -17,7 +15,6 @@ For strands generate, please also check our paper.
 
 
 
-----------
 ## Getting Started ##
 Clone the repository and install requirements:
 
