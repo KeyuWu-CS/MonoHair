@@ -1,5 +1,5 @@
 
-# MonoHair:High-Fidelity Hair Modeling from a Monocular Video (<font color='red'> CVPR2024 Oral </font>) [[Projectpage](https://keyuwu-cs.github.io/MonoHair/ "Projectpage")] #
+# MonoHair:High-Fidelity Hair Modeling from a Monocular Video  <font color='red'> ( CVPR2024 Oral ) </font> [[Projectpage](https://keyuwu-cs.github.io/MonoHair/ "Projectpage")] #
 This repository is the official code for MonoHair. Give a monocular video, MonoHair reconstruct a high-fidelity 3D strand model. 
 
 In this repository we also give some examples for reconstructing 3D hair from a monocular video or multi-view images.
@@ -31,7 +31,7 @@ Initialize submodules of [Instant-NGP](https://github.com/NVlabs/instant-ngp "In
 
     git submodule update --init --recursive
 
-Compile Instant-NGP and move our modified run.py to instant-ngp/scripts.
+Compile Instant-NGP and move our modified [run.py](https://github.com/KeyuWu-CS/MonoHair/blob/master/run.py) to instant-ngp/scripts.
 
 	cp run.py submodules/instant-ngp/scripts/
 	cd submodules/instant-ngp
@@ -45,6 +45,7 @@ if you have problem with Instant-NGP compile. Please refer their [instruction](h
 
 ## Download assets ##
 	### Download some pretrained model and data for avatar optimization.  
+	bash fetch_pretrained_model.sh
     bash fetch_data.sh
 
 ## Download examples ##
@@ -67,6 +68,7 @@ Download our example datas [One Driven](https://1drv.ms/f/s!AhfQmEHzY54Ya2gGaslX
 
 
 ## Test your own data ##
+In our given examples, we ignored the steps of running colmap and training instant ngp. So if you want to test your own captured videos. Please refer to the following steps.
 
 
 
