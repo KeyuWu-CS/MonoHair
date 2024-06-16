@@ -81,7 +81,7 @@ if __name__ == '__main__':
 
         mvs_args = config_ds_real_parser()
         mvs_args.set_defaults(config='configs/dense_sample_real/vit_standard.txt')
-        # mvs_args.add_argument('--use_colmap_points' ,action='store_true' ,default=False)
+        mvs_args.add_argument('--use_colmap_points' ,action='store_true' ,default=False)
         mvs_args.add_argument('--case' ,type=str ,default=args.data.case)
         mvs_args =mvs_args.parse_known_args()[0]
         deep_mvs_eval(mvs_args)
