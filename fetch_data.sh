@@ -1,3 +1,19 @@
+echo -e "\nDownloading more data..."
+wget https://nextcloud.tuebingen.mpg.de/index.php/s/jraekdRrxCzYEWB/download -O ./assets/data/delta_utilities2.zip
+unzip ./assets/data/delta_utilities2.zip -d ./assets/data
+mv ./assets/data/delta_utilities2/* ./assets/data/
+rm ./assets/data/delta_utilities2.zip
+rm -rf ./assets/data/delta_utilities2
+
+# detla utilities
+echo -e "\nDownloading delta data..."
+wget https://nextcloud.tuebingen.mpg.de/index.php/s/zR3DM3zEdje984c/download -O ./assets/data/delta_utilities.zip
+unzip ./assets/data/delta_utilities.zip -d ./assets/data
+mv ./assets/data/delta_utilities/* ./assets/data/
+rm ./assets/data/delta_utilities.zip
+rm -rf ./assets/data/delta_utilities
+rm -rf ./assets/data/__MACOSX
+
 # SMPL-X 2020 (neutral SMPL-X model with the FLAME 2020 expression blendshapes)
 urle () { [[ "${1}" ]] || return 1; local LANG=C i x; for (( i = 0; i < ${#1}; i++ )); do x="${1:i:1}"; [[ "${x}" == [a-zA-Z0-9.~-] ]] && echo -n "${x}" || printf '%%%02X' "'${x}"; done; echo; }
 echo -e "\nYou need to register at https://smpl-x.is.tue.mpg.de"
@@ -20,23 +36,11 @@ unzip utilities.zip
 rm utilities.zip
 cd ../..
 
-# detla utilities
-echo -e "\nDownloading delta data..."
-wget https://nextcloud.tuebingen.mpg.de/index.php/s/zR3DM3zEdje984c/download -O ./assets/data/delta_utilities.zip
-unzip ./assets/data/delta_utilities.zip -d ./assets/data
-mv ./assets/data/delta_utilities/* ./assets/data/
-rm ./assets/data/delta_utilities.zip
-rm -rf ./assets/data/delta_utilities
-rm -rf ./assets/data/__MACOSX
 
 
 
-echo -e "\nDownloading more data..."
-wget https://nextcloud.tuebingen.mpg.de/index.php/s/jraekdRrxCzYEWB/download -O ./assets/data/delta_utilities2.zip
-unzip ./assets/data/delta_utilities2.zip -d ./assets/data
-mv ./assets/data/delta_utilities2/* ./assets/data/
-rm ./assets/data/delta_utilities2.zip
-rm -rf ./assets/data/delta_utilities2
+
+
 
 
 

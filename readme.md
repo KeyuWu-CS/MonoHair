@@ -27,17 +27,17 @@ Clone the repository and install requirements:
 
 ## Dependencies and submodules ##
 
-Install [Pytorch](https://pytorch.org/ "torch"), [Pytorch3d](https://github.com/facebookresearch/pytorch3d) and [tiny-cuda-nn](https://github.com/NVlabs/tiny-cuda-nn). We have tested on Ubuntu 22.04.4, python==3.10.12 pytorch==1.11.0, pytorch3d==0.7.2 with CUDA 11.3 on RTX 3090Ti. You can install any version that is compatible with these dependencies. We know torch==1.3.0 have some bug when employing [MODNet](https://github.com/ZHKKKe/MODNet "MODNet").
-
+Install [Pytorch](https://pytorch.org/ "torch"), [Pytorch3d](https://github.com/facebookresearch/pytorch3d) and [tiny-cuda-nn](https://github.com/NVlabs/tiny-cuda-nn). We have tested on Ubuntu 22.04.4, gcc==9.5, python==3.10.12 pytorch==1.11.0, pytorch3d==0.7.2 with CUDA 11.3 on RTX 3090Ti. You can install any version that is compatible with these dependencies. We know torch==1.3.0 have some bug when employing [MODNet](https://github.com/ZHKKKe/MODNet "MODNet").
+	# if have problem when install pytorch 3d, you can try to install fvcore: pip install  fvcore==0.1.5.post20220512
 	pip install --no-index --no-cache-dir pytorch3d -f https://dl.fbaipublicfiles.com/pytorch3d/packaging/wheels/py310_cu113_pyt1110/download.html
 	
 
-
-Initialize submodules of [Instant-NGP](https://github.com/NVlabs/instant-ngp "Instant-NGP"), [MODNet](https://github.com/ZHKKKe/MODNet "MODNet"), [CDGNet](https://github.com/tjpulkl/CDGNet "CDGNet"), [DELTA](https://github.com/yfeng95/DELTA "DELTA") and [face-parsing](https://github.com/zllrunning/face-parsing.PyTorch "face-parsing"). Download pretrained model for [MODNet](https://github.com/ZHKKKe/MODNet "MODNet"), [CDGNet](https://github.com/tjpulkl/CDGNet "CDGNet") and [face-parsing](https://github.com/zllrunning/face-parsing.PyTorch "face-parsing").
+Initialize submodules of [Instant-NGP](https://github.com/NVlabs/instant-ngp "Instant-NGP"), [MODNet](https://github.com/ZHKKKe/MODNet "MODNet"), [CDGNet](https://github.com/tjpulkl/CDGNet "CDGNet"), [DELTA](https://github.com/yfeng95/DELTA "DELTA") and [face-parsing](https://github.com/zllrunning/face-parsing.PyTorch "face-parsing"). 
 
     git submodule update --init --recursive
 	pip install git+https://github.com/NVlabs/tiny-cuda-nn/#subdirectory=bindings/torch
 
+If you have problem when install tiny-cuda-nn or pytorch3d, please refer to their repositories.
 
 Compile Instant-NGP and move our modified [run.py](https://github.com/KeyuWu-CS/MonoHair/blob/master/run.py) to instant-ngp/scripts.
 
@@ -52,6 +52,7 @@ Compile Instant-NGP and move our modified [run.py](https://github.com/KeyuWu-CS/
 if you have problem with Instant-NGP compile. Please refer their [instruction](https://github.com/NVlabs/instant-ngp)
 
 ## Download assets ##
+Download pretrained model for [MODNet](https://github.com/ZHKKKe/MODNet "MODNet"), [CDGNet](https://github.com/tjpulkl/CDGNet "CDGNet") and [face-parsing](https://github.com/zllrunning/face-parsing.PyTorch "face-parsing").
 	### Download some pretrained model and data for avatar optimization.  
 	bash fetch_pretrained_model.sh
     bash fetch_data.sh
