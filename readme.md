@@ -25,11 +25,13 @@ Clone the repository and install requirements:
 
 ## Dependencies and submodules ##
 
-Install [Pytorch](https://pytorch.org/ "torch"), [Pytorch3d](https://github.com/facebookresearch/pytorch3d) and [tiny-cuda-nn](https://github.com/NVlabs/tiny-cuda-nn). We have tested on Ubuntu 22.04.4, python==3.10.12 pytorch==1.13.0, pytorch3d==0.7.6 with CUDA 11.6 on RTX 3090Ti. You can install any version that is compatible with these dependencies.
+Install [Pytorch](https://pytorch.org/ "torch"), [Pytorch3d](https://github.com/facebookresearch/pytorch3d) and [tiny-cuda-nn](https://github.com/NVlabs/tiny-cuda-nn). We have tested on Ubuntu 22.04.4, python==3.10.12 pytorch==1.11.0, pytorch3d==0.7.2 with CUDA 11.3 on RTX 3090Ti. You can install any version that is compatible with these dependencies.
 
 Initialize submodules of [Instant-NGP](https://github.com/NVlabs/instant-ngp "Instant-NGP"), [MODNet](https://github.com/ZHKKKe/MODNet "MODNet"), [CDGNet](https://github.com/tjpulkl/CDGNet "CDGNet"), [DELTA](https://github.com/yfeng95/DELTA "DELTA") and [face-parsing](https://github.com/zllrunning/face-parsing.PyTorch "face-parsing"). Download pretrained model for [MODNet](https://github.com/ZHKKKe/MODNet "MODNet"), [CDGNet](https://github.com/tjpulkl/CDGNet "CDGNet") and [face-parsing](https://github.com/zllrunning/face-parsing.PyTorch "face-parsing").
 
     git submodule update --init --recursive
+	pip install git+https://github.com/NVlabs/tiny-cuda-nn/#subdirectory=bindings/torch
+
 
 Compile Instant-NGP and move our modified [run.py](https://github.com/KeyuWu-CS/MonoHair/blob/master/run.py) to instant-ngp/scripts.
 
@@ -68,7 +70,7 @@ Download our example datas [One Driven](https://1drv.ms/f/s!AhfQmEHzY54Ya2gGaslX
 
 
 ## Test your own data ##
-In our given examples, we ignored the steps of running colmap and training instant ngp. So if you want to test your own captured videos. Please refer to the following steps.
+In our given examples, we ignored the steps of running colmap and training instant ngp. So if you want to test your own captured videos. Please refer to the [following steps](https://github.com/KeyuWu-CS/MonoHair/tree/master/video_preprocess).
 
 
 
@@ -90,6 +92,9 @@ Here are some great resources we benefit from:
 - [DELTA](https://github.com/yfeng95/DELTA "DELTA") for bust fitting.
   
 
-
-
+## TO DO List ##
+- [ ] Upload full example data (before June.24)
+- [ ] Check version problem (before June.24)
+- [ ] Release visualization program (before June.30)
+- [ ] Automatic method to add key_frame.json
 
