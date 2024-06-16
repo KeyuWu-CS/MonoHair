@@ -664,6 +664,7 @@ class SMPLX_optimizer(torch.nn.Module):
 
             else:
                 pred_lmk = opdict['pred_lmk']
+
                 gt_lmk = batch['lmk']
             gt_lmk = gt_lmk.to(pred_lmk.device).type(torch.float32)
             # lmk loss, use confidence, if confidence is 0, then ignore this points (e.g. especially for iris points)
@@ -864,14 +865,16 @@ def get_config():
 if __name__ == '__main__':
     args = get_config()
     dataprocess = DataProcessor(args)
-    dataprocess.run(args.subject_path,args.ignore_existing)
+    # dataprocess.run(args.subject_path,args.ignore_existing)
     current_irispath_list =  glob(os.path.join(args.path, args.subject, 'iris', '*.txt'))
+    current_lmkpath_list =  glob(os.path.join(args.path, args.subject, 'landmark2d', '*.txt'))
 
 
     imagepath_list = []
     for path in current_irispath_list:
         name = path.split('/')[-1][:-4]
-        imagepath_list.append(os.path.join(args.path, args.subject, 'matting', name + '.png'))
+        if os.path.exists(os.path.join(args.path, args.subject, 'landmark2d', name+ '.txt')):
+            imagepath_list.append(os.path.join(args.path, args.subject, 'matting', name + '.png'))
 
 
     dataset = NerfDataset(args, given_imagepath_list = imagepath_list)
