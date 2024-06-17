@@ -58,13 +58,13 @@ Download pretrained model for [MODNet](https://github.com/ZHKKKe/MODNet "MODNet"
 	# Download some pretrained model and data for avatar optimization.  
 	# You should download pretrained model of CDGNet in thier repository
 	bash fetch_pretrained_model.sh
-    bash fetch_data.sh
+    bash fetch_data.sh    #this will cost long time.
 
 ## Download examples ##
 Download our example datas [One Driven](https://1drv.ms/f/s!AhfQmEHzY54Ya2gGaslXnM2IPCk?e=phk5me "One Driven"). For obtaining a certain results, we have run colmap and save the pretrained instant-ngp weight. Then you need to run the follow four steps to get the results. We also provide full results (include intermediate results) in full folder. You can use it to check the results of each step.  
 **Tips:** Since the wig use the same unreal human head, we don't use flame (smplx) model as template and don't run multi-view bust fitting. 
 
-## 3D Hair Reconstruction##
+## 3D Hair Reconstruction ##
 
 	# Prepare data: instant-ngp intialization, segmentation, gabor filter etc. You skip this step if use our provided data.
     python prepare_data.py --yaml=configs/reconstruct/big_wavy1 
