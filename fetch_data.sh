@@ -1,7 +1,7 @@
 echo -e "\nDownloading more data..."
 wget https://nextcloud.tuebingen.mpg.de/index.php/s/jraekdRrxCzYEWB/download -O ./assets/data/delta_utilities2.zip
 unzip ./assets/data/delta_utilities2.zip -d ./assets/data
-mv ./assets/data/delta_utilities2/* ./assets/data/
+mv ./assets/data/delta_utiliites2/* ./assets/data/
 rm ./assets/data/delta_utilities2.zip
 rm -rf ./assets/data/delta_utilities2
 
