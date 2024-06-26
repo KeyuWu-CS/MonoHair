@@ -56,7 +56,8 @@ if you have problem with Instant-NGP compile. Please refer their [instruction](h
 Download pretrained model for [MODNet](https://github.com/ZHKKKe/MODNet "MODNet"), [CDGNet](https://github.com/tjpulkl/CDGNet "CDGNet") and [face-parsing](https://github.com/zllrunning/face-parsing.PyTorch "face-parsing").
 
 	# Download some pretrained model and data for avatar optimization.  
-	# You should download pretrained model of CDGNet in thier repository
+	# You should download pretrained model of CDGNet in thier repository, their are 
+	# two kind of "LIP_epoch_149.pth", please download the one with a size of 300MB.
 	bash fetch_pretrained_model.sh
     bash fetch_data.sh    #this will cost long time.
 
