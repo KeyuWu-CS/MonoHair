@@ -79,6 +79,15 @@ Download our example datas [One Driven](https://1drv.ms/f/s!AhfQmEHzY54Ya2gGaslX
 	# Strands generation
 	python HairGrow.py --yaml=configs/reconstruct/big_wavy1
 
+## Visualization ##
+Download our released program at  [One Driven](https://1drv.ms/f/s!AhfQmEHzY54Ya2gGaslXnM2IPCk?e=phk5me "One Driven") to visualize the results. 
+
+    # First copy the output/10-16/full/connected_strands.hair to ../Ours/Voxel_hair
+	cp data/case_name/output/10-16/full/connected_strands.hair data/case_name/ours/Voxel_hair
+
+	# unzip VoxelHair_demo_v3.zip and click VoxelHair_v1.exe. 
+	# Then click "Load Strands" to visualize the results. You also can use Blender to achieve realistic rendering.
+
 
 ## Test your own data ##
 In our given examples, we ignored the steps of running colmap and training instant ngp. So if you want to test your own captured videos. Please refer to the [following steps](https://github.com/KeyuWu-CS/MonoHair/tree/master/video_preprocess).
@@ -104,8 +113,8 @@ Here are some great resources we benefit from:
   
 
 ## TO DO List ##
-- [ ] Upload full example data (before June.24)
-- [ ] Check version problem (before June.24)
-- [ ] Release visualization program (before June.30)
+- [x] Upload full example data (before June.24)
+- [x] Check version problem (before June.24)
+- [x] Release visualization program (before June.30)
 - [ ] Automatic method to add key_frame.json
 
