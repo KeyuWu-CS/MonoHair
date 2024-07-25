@@ -165,16 +165,24 @@ def calculate_mask(args):
         normalize,
     ])
 
+    # Load existing state_dict and state_dict_old
     state_dict = model.state_dict().copy()
     state_dict_old = torch.load(args.CDGNET_ckpt, map_location='cpu')
 
+    # Create a temp dict to update state_dict while avoiding OrderedDict RuntimeError
+    updated_state_dict = {}
+
     for key, nkey in zip(state_dict_old.keys(), state_dict.keys()):
         if key != nkey:
-            # remove the 'module.' in the 'key'
-            state_dict[key[7:]] = deepcopy(state_dict_old[key])
+            # Remove 'module.' from 'key'
+            updated_state_dict[key[7:]] = deepcopy(state_dict_old[key])
         else:
-            state_dict[key] = deepcopy(state_dict_old[key])
+            updated_state_dict[key] = deepcopy(state_dict_old[key])
 
+    # Update state_dict after the loop
+    state_dict.update(updated_state_dict)
+
+    # Load and set the model's state_dict
     model.load_state_dict(state_dict)
     model.eval()
     model.cuda()
