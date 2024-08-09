@@ -7,7 +7,7 @@ If you want to test your own data, you should refer to the following steps:
 2. Download COLMAP.exe in Windows (also can be other platforms), run COLMAP.exe using the above images and export the model with .txt format. Just same with our given examples.
 3. Run get transoform.json by running submodules/instant-ngp/scripts/colmap2nerf.py. You can also refer to the [instruction](https://github.com/NVlabs/instant-ngp/blob/master/docs/nerf_dataset_tips.md) of Instant-NGP. It is the same steps.
 	
-	`data-folder$ python [path-to-instant-ngp]/scripts/colmap2nerf.py --colmap_matcher exhaustive --run_colmap= --aabb_scale 32`
+	`data-folder$ python [path-to-instant-ngp]/scripts/colmap2nerf.py --colmap_matcher exhaustive --run_colmap --aabb_scale 32`
 3. You must download [Instant-NGP.exe](https://github.com/NVlabs/instant-ngp) in Windows, drag the colmap folder (contain images folder and transform.json) to the instant-ngp program. After training 2-3 minutes, crop the bbox to clear up the background and then save the pretrained weight and add the key frame in front view.
 
 
