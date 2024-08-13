@@ -865,7 +865,7 @@ def get_config():
 if __name__ == '__main__':
     args = get_config()
     dataprocess = DataProcessor(args)
-    # dataprocess.run(args.subject_path,args.ignore_existing)
+    dataprocess.run(args.subject_path,args.ignore_existing)
     current_irispath_list =  glob(os.path.join(args.path, args.subject, 'iris', '*.txt'))
     current_lmkpath_list =  glob(os.path.join(args.path, args.subject, 'landmark2d', '*.txt'))
 
