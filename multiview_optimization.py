@@ -854,7 +854,6 @@ def get_config():
     args = options.set(opt_cmd=opt_cmd)
     # args.output_path = os.path.join(args.data.root, args.data.case,args.output_root,args.name)
     args.output_path = os.path.join(args.output_root, args.name)
-    args.ckpt_path = os.path.join(args.output_path, 'HairStyleVAE.pth')
     os.makedirs(args.output_path, exist_ok=True)
     options.save_options_file(args)
 
@@ -865,7 +864,7 @@ def get_config():
 if __name__ == '__main__':
     args = get_config()
     dataprocess = DataProcessor(args)
-    dataprocess.run(args.subject_path,args.ignore_existing)
+    dataprocess.run(args.subject_path,ignore_existing=args.ignore_existing)
     current_irispath_list =  glob(os.path.join(args.path, args.subject, 'iris', '*.txt'))
     current_lmkpath_list =  glob(os.path.join(args.path, args.subject, 'landmark2d', '*.txt'))
 
